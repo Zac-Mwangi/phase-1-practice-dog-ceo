@@ -53,18 +53,16 @@ function getName() {
 }
 
 function checkFirstLetter(letter) {
+  let img_name_div = document.getElementById("dog-breeds");
+  img_name_div.innerHTML = "";
 
-    let img_name_div = document.getElementById("dog-breeds");
-    img_name_div.innerHTML = ''
-
-  for(let i = 0; i<array_names.length; i++){
-
-      if(array_names[i].charAt(0) === letter){
-        console.log(array_names[i])
-        let li = document.createElement("li");
-        li.innerText = array_names[i];
-        img_name_div.appendChild(li);
-      }
+  for (let i = 0; i < array_names.length; i++) {
+    if (array_names[i].charAt(0) === letter) {
+      console.log(array_names[i]);
+      let li = document.createElement("li");
+      li.innerText = array_names[i];
+      img_name_div.appendChild(li);
+    }
   }
 }
 
